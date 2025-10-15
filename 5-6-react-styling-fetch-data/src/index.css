@@ -1,4 +1,6 @@
-/* Custom CSS Variables */
+/* ================================
+   TODO 2.1: Theme Colors
+================================ */
 :root {
   --primary-color: #0d6efd;
   --secondary-color: #6c757d;
@@ -6,34 +8,68 @@
   --dark-color: #212529;
 }
 
-/* Custom Styles */
+/* ================================
+   TODO 2.2: Main App Container
+================================ */
 .app {
   background-color: var(--light-color);
   min-height: 100vh;
 }
 
-.user-card {}
-
-.user-card:hover {}
-
-.user-avatar {}
-
-.user-avatar-large {}
-
-/* Bootstrap overrides */
-.btn-primary {}
-
-.btn-primary:hover {}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .user-avatar {}
-
-  .display-4 {}
+/* ================================
+   TODO 2.3: User Card
+================================ */
+.user-card {
+  border: none;
+  background-color: #ffffff;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Custom card header styling */
-.card-header {}
+/* ================================
+   TODO 2.4: Hover Effect
+================================ */
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
-/* Custom alert styling */
-.alert {}
+/* ================================
+   TODO 2.5: Circular Avatars
+   Small avatar (UserCard)
+================================ */
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Large avatar (UserModal) */
+.user-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+/* ================================
+   TODO 2.6: Responsive Avatar
+================================ */
+@media (max-width: 768px) {
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+}
